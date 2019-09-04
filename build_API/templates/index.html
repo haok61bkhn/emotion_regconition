@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Demo_Emotion_Detection</title>
+   <!--  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mystyle.css') }}">
+    -->
+    <style>
+    html{
+    background-image: url("{{ url_for('static', filename='background.png') }}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    }
+    #camera {
+    
+    width: 612px;
+    margin-left: 33%;
+    margin-top: 9%;
+    }
+    #img{
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="camera">
+      <img id ="img" src="{{ url_for('video_feed') }}">
+    </div>
+    
+  </body>
+</html>
