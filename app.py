@@ -20,7 +20,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def upload_file():
     global predict
     if request.method == "GET":
-      return render_template("train.html")
+      return render_template("test.html")
     if request.method == 'POST':
         src=None
         # check if the post request has the file part
@@ -50,7 +50,7 @@ def upload_file():
             img = predict.image
             # cv2.imwrite("image",img)
             cv2.imwrite("static/res.jpg",img) 
-        return render_template("train.html", src="static/res.jpg")
+        return render_template("test.html", src="static/res.jpg")
 
 @app.route("/train",methods=['GET','POST'])
 def train():
